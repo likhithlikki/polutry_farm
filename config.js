@@ -1,7 +1,7 @@
 // Public config (safe for GitHub). The access KEY is NOT stored here:
 // it is typed once in the page and kept in this browser's localStorage.
 window.CONFIG = {
-  APPS_SCRIPT_URL: "",      // https://script.google.com/macros/s/XXXX/exec
+  APPS_SCRIPT_URL: "https://script.google.com/macros/s/AKfycby0pxiFX31ASXevO7ac2NHWopxIkbwr9sn-LWcrngW-JNK5-WW3VKefMDRsho4lquIS/exec",      // https://script.google.com/macros/s/XXXX/exec
   MOCK: false,              // production default; use ?mock=1 for explicit local demo only
   POLL_MS: 15000,           // status refresh (each Google call takes ~3 s)
   CMD_POLL_MS: 5000,        // named command progress polling
