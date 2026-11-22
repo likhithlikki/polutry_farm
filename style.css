@@ -1,0 +1,34 @@
+:root{--bg:#f4f5f7;--card:#fff;--fg:#1b1f24;--mut:#6a737d;--bd:#d8dce1;--ac:#0a7d4b;--bad:#c62828;--warn:#b26a00;--ok:#1b8a3a}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#101316;--card:#1a1f24;--fg:#e8eaed;--mut:#9aa4af;--bd:#2c343c;--ac:#3ddc97;--bad:#ff6b6b;--warn:#ffb74d;--ok:#5ad17a}}
+:root[data-theme=dark]{--bg:#101316;--card:#1a1f24;--fg:#e8eaed;--mut:#9aa4af;--bd:#2c343c;--ac:#3ddc97;--bad:#ff6b6b;--warn:#ffb74d;--ok:#5ad17a}
+*{box-sizing:border-box}body{padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom);margin:0;font:15px/1.4 system-ui,sans-serif;background:var(--bg);color:var(--fg)}
+header{display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:8px 12px;background:var(--card);border-bottom:1px solid var(--bd);position:sticky;top:0;z-index:5}
+nav{display:flex;flex-wrap:wrap;gap:4px;flex:1}nav a{padding:6px 10px;border-radius:8px;color:var(--fg);text-decoration:none}
+nav a.on{background:var(--ac);color:#fff}.clk{text-align:right;font-variant-numeric:tabular-nums}.clk small{display:block;color:var(--mut);font-size:11px}
+main{max-width:1100px;margin:0 auto;padding:12px}
+#banner,#cmdbar{padding:8px 12px;text-align:center;font-weight:600}#banner{background:var(--bad);color:#fff}#banner.warn{background:var(--warn)}
+#cmdbar{background:var(--card);border-bottom:1px solid var(--bd)}#cmdbar.ok{color:var(--ok)}#cmdbar.bad{color:var(--bad)}
+.grid{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}.g2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:10px}.card h3{margin:0 0 6px;font-size:13px;color:var(--mut);text-transform:uppercase;letter-spacing:.04em}
+.big{font-size:22px;font-weight:700}.mut{color:var(--mut)}.bad{color:var(--bad)}.ok{color:var(--ok)}.warn{color:var(--warn)}
+.fans{display:grid;gap:6px;grid-template-columns:repeat(auto-fill,minmax(70px,1fr))}.fan{border:1px solid var(--bd);border-radius:8px;padding:5px;text-align:center;font-size:12px}
+.fan.on{border-color:var(--ok);background:color-mix(in srgb,var(--ok) 15%,transparent)}.fan.na{opacity:.35}.fan b{display:block;font-size:14px}
+button{font:inherit;padding:7px 12px;border-radius:8px;border:1px solid var(--bd);background:var(--card);color:var(--fg);cursor:pointer}
+button.pri{background:var(--ac);color:#fff;border-color:var(--ac)}button.dng{border-color:var(--bad);color:var(--bad)}button:disabled,input:disabled,select:disabled{opacity:.45;cursor:not-allowed}
+input,select{font:inherit;padding:5px 7px;border:1px solid var(--bd);border-radius:6px;background:var(--bg);color:var(--fg);max-width:100%}input[type=number]{width:80px}
+table{width:100%;border-collapse:collapse}th,td{padding:5px 6px;border-bottom:1px solid var(--bd);text-align:left;font-size:14px}.sc{overflow-x:auto}
+label.f{display:flex;justify-content:space-between;align-items:center;gap:8px;margin:5px 0}.row{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}
+.alert{padding:8px;border-radius:8px;border:1px solid var(--warn);color:var(--warn);margin:8px 0}svg text{fill:var(--mut);font-size:11px}
+.log{max-height:180px;overflow:auto;font:12px ui-monospace,monospace}.pill{padding:1px 8px;border-radius:99px;border:1px solid var(--bd);font-size:12px}
+
+/* Generic GPIO Pins page */
+.pin-overview{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.pin-overview h2{margin:0 0 5px}.pin-overview p{margin:0}
+.board-state{display:inline-flex;align-items:center;gap:8px;font-weight:700;padding:8px 12px;border:1px solid var(--bd);border-radius:999px}
+.board-state.online{color:var(--ok)}.board-state.offline{color:var(--bad)}
+.state-dot{width:9px;height:9px;border-radius:50%;background:currentColor;display:inline-block}
+.pin-table{min-width:850px}.pin-id,.pin-error{display:block;font-size:.78rem;margin-top:3px}.pin-error{color:var(--bad);max-width:190px;overflow-wrap:anywhere}
+.pin-badge{display:inline-block;padding:4px 8px;border-radius:999px;font-size:.8rem;font-weight:700;border:1px solid var(--bd);white-space:nowrap}
+.pin-badge.ok{color:var(--ok)}.pin-badge.pending{color:var(--warn)}.pin-badge.bad,.pin-badge.offline{color:var(--bad)}.pin-badge.muted{color:var(--mut)}
+.pin-toggle{padding:7px 12px;min-width:88px}.pin-toggle.turn-on{border-color:var(--warn)}.pin-toggle:disabled{opacity:.45;cursor:not-allowed}
+@media(max-width:760px){.pin-overview{align-items:flex-start}.pin-table{font-size:.86rem}}

@@ -1,0 +1,14 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src https://script.google.com https://script.googleusercontent.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; script-src 'self'">
+<meta name="color-scheme" content="light dark"><title>Poultry Controller</title>
+<link rel="stylesheet" href="style.css"></head><body>
+<header><b>🐔 Poultry</b><nav id="nav">
+<a href="#dashboard">Dashboard</a><a href="#fans">Fan settings</a><a href="#setpoints">Setpoints</a>
+<a href="#alarms">Alarms</a><a href="#logs">Logs</a><a href="#pins">Pins</a><a href="#board">Board details</a></nav>
+<div class="clk"><span id="clk"></span><small id="clkiso"></small></div>
+<button id="theme" title="Theme">◐</button><button id="keybtn" title="Access key">🔑</button></header>
+<div id="banner" hidden></div><div id="cmdbar" hidden></div>
+<main id="view"></main>
+<noscript><p class="alert">JavaScript is required to use the poultry controller dashboard.</p></noscript>
+<script src="config.js"></script><script src="app.js"></script></body></html>
